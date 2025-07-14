@@ -6,7 +6,8 @@ Write-Host ""
 try {
     $javaVersion = java -version 2>&1
     Write-Host "Java detecte: $($javaVersion[0])" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "Erreur: Java n'est pas installe ou pas dans le PATH" -ForegroundColor Red
     Read-Host "Appuyez sur Entree pour quitter"
     exit 1
@@ -37,13 +38,15 @@ try {
             Write-Host ""
             Write-Host "=== Execution du programme de test ===" -ForegroundColor Green
             Set-Location bin
-            java TestSupermatrice
+            java TestSuperMatrice
             Set-Location ..
         }
-    } else {
+    }
+    else {
         Write-Host "Erreur de compilation!" -ForegroundColor Red
     }
-} catch {
+}
+catch {
     Write-Host "Erreur lors de la compilation: $($_.Exception.Message)" -ForegroundColor Red
 }
 

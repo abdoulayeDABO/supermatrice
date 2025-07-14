@@ -25,7 +25,7 @@ $(BIN_DIR)/%.class: $(SRC_DIR)/%.java
 # Exécution du test
 test: compile
 	@echo "Exécution du programme de test..."
-	cd $(BIN_DIR) && java TestSupermatrice
+	cd $(BIN_DIR) && java TestSuperMatrice
 
 # Nettoyage
 clean:

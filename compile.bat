@@ -31,7 +31,7 @@ if %errorlevel% equ 0 (
         echo.
         echo === Execution du programme de test ===
         cd bin
-        java TestSupermatrice
+        java TestSuperMatrice
         cd ..
     )
 ) else (
