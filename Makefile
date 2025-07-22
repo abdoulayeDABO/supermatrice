@@ -29,7 +29,7 @@ test: compile
 
 # Nettoyage
 clean:
-	@if exist $(BIN_DIR) rmdir /s /q $(BIN_DIR)
+	@rm -rf $(BIN_DIR)
 	@echo "Nettoyage terminé"
 
 # Affichage de l'aide
