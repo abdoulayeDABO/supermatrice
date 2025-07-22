@@ -89,9 +89,9 @@ public class SuperMatrice {
             for (int j = 0; j < b.nc; j++) {
                 double somme = 0.0;
                 for (int k = 0; k < a.nc; k++) {
-                    somme += a.acces(i, k) * b.acces(k, j);
+                    somme += SuperMatrice.acces(a, i, k) * SuperMatrice.acces(b, k, j);
                 }
-                resultat.setAcces(i, j, somme);
+                SuperMatrice.setAcces(resultat, i, j, somme);
             }
         }
         
@@ -189,6 +189,7 @@ public class SuperMatrice {
      * En Java, le garbage collector s'occupe de la libération mémoire
      * Cette méthode peut être appelée pour nettoyer explicitement
      */
+  
     public static void rendreSupermat(SuperMatrice sm) {
         if (sm == null) return;
         
@@ -204,7 +205,6 @@ public class SuperMatrice {
      * Méthode utilitaire pour afficher la supermatrice
      */
     public void afficher() {
-        System.out.println("SuperMatrice " + nl + "x" + nc + ":");
         for (int i = 0; i < nl; i++) {
             for (int j = 0; j < nc; j++) {
                 System.out.printf("%8.2f ", ligne[i][j]);
@@ -212,5 +212,6 @@ public class SuperMatrice {
             System.out.println();
         }
     }
+    
 }
 

@@ -22,21 +22,11 @@ if %errorlevel% equ 0 (
     echo.
     echo Pour executer le programme de test:
     echo cd bin
-    echo java TestSupermatrice
+    echo java TestSuperMatrice
     echo.
-    
-    :: Proposition d'executer directement
-    set /p choice="Voulez-vous executer le test maintenant? (o/n): "
-    if /i "%choice%"=="o" (
-        echo.
-        echo === Execution du programme de test ===
-        cd bin
-        java TestSuperMatrice
-        cd ..
-    )
+
 ) else (
     echo Erreur de compilation!
 )
 
 echo.
-pause

@@ -51,4 +51,3 @@ catch {
 }
 
 Write-Host ""
-Read-Host "Appuyez sur Entree pour quitter"
